@@ -287,6 +287,9 @@ public class Library {
     }
 
     public static void main(String[] args) {
+        // Ensure database and seed data exist on first run
+        CreateDatabase.ensureDatabase();
+
         Library li = null;
         try {
             li = new Library();
